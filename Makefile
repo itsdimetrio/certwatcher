@@ -16,3 +16,4 @@ build: deps
 
 deps:
 	go get -u github.com/mitchellh/gox
+	go get
