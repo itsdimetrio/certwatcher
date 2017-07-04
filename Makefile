@@ -12,7 +12,7 @@ test:
 
 build: deps
 	gox -osarch="linux/amd64 darwin/amd64" \
-	-output="pkg/{{.OS}}_{{.Arch}}/" .
+	-output="pkg/{{.OS}}_{{.Arch}}/$APPNAME" .
 
 deps:
 	go get -u github.com/mitchellh/gox
