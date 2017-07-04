@@ -1,4 +1,12 @@
 language: go
 go:
-  - 1.8.x
+- 1.8.x
 install: make build
+deploy:
+  provider: releases
+  api_key:
+    secure: KMzxx8JGiVDb8j30VOoIJDbuHqvky4fHX9AjoVJqW09KlZPYLrrJEE5yIEV3L0Yw5rJRLtRYVKxTl2YkSjm/PRifypYfQlOk1xDTudmda8YGKKDwptgXID5VC/YC41amFJSFwrz9PNxXFeYHK25mAMCX3Rj9YU8wDdVAw1bbE9mL6Pk0mKaXaaw3NiavDboUV7m8XAxGEakvprxpXP0YR9iAGMh778Z7j89mq0duRtdgsEwgc3EtaPMzP8glok6tJWMHh3QUjU42mJrz7/27PxZWYrbSQxxNv/LKiPQTdPhj6v2yJ1W1WMBBmpYV1akWUuuFDpRf6zzfdMp5FoqhJggXKcz+zn7vQq1Uj4pRAp1nQCBpdy5niu30CsEwymkLEJ/aztJPJpjjhj3wIJ2TKmU6NBPl9/vLayZpNzShvz41y6vFfA/jAnROgmySluE9SPL6kOsOK6NYMjnndOMvsH7YiSaO29s/vt4hi/4lI0m99PvieFFuw5qGj58wtb7PXwwG/Z2lcKrriPqoNOwkb3ovWTeMTBJ50QCAY0hMkBFpf7tOvsKOF4Ok6z1rOdIyngWXKOMOGZt8R/pBxwthb5SrhlNGRSddP9eYNHw0tuAkKx4HByxN1D68VcM/hEo16ZLnqh4Za4/n3xWZ22zPFJ7NY2l8N3gKdtKdgSdJC+A=
+  file: pkg/*
+  on:
+    repo: itsdimetrio/certwatcher
+    tags: true
